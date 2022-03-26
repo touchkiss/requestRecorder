@@ -1,0 +1,33 @@
+{
+  "name": "requestRecorder",
+  "description": "web request recorder",
+  "version": "0.1",
+  "manifest_version": 3,
+  "icons": {
+    "16": "assets/img/icon.png",
+    "32": "assets/img/icon.png",
+    "64": "assets/img/icon.png",
+    "128": "assets/img/icon.png"
+  },
+  "action": {
+    "default_title": "requestRecorder",
+    "default_icon": "assets/img/icon.png",
+    "default_popup": "pages/defaultPopup/defaultPopup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "cookies",
+    "tabs",
+    "sessions",
+    "storage",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
